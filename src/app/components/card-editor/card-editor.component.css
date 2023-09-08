@@ -1,0 +1,82 @@
+.editor-card
+{
+    flex-direction: column;
+    min-width: 200px;
+    background-color: rgb(245, 224, 207);
+    padding-top: 15px;
+    padding-left: 20px;
+    border-radius: 2%;
+    align-items: flex-start;
+
+}
+
+input
+{
+    margin: 5;
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.editor-card-title
+{
+    background-color: rgba(255,255,255,0.5);
+    width: 50%;
+    border-radius: 5%;
+    padding-left: 20;
+}
+
+.editor-card-text
+{
+    padding-top: 20px;
+    background-color: rgba(255,255,255,50);
+    width: 50%;
+    height: 60%;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 1.5fr;
+    grid-template-rows: 0.3fr 1.7fr;
+    gap: 0px 0px;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "Header"
+      "Editor";
+  }
+  
+  .Header { grid-area: Header; 
+background-color: rgb(246, 248, 223);
+}
+  
+  .Editor {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Left-Side Right-Side ."
+      ". . ."
+      ". . .";
+    grid-area: Editor;
+  }
+  
+  .Left-Side { grid-area: Left-Side; }
+  
+  .Right-Side {  display: grid;
+    grid-template-columns: 1.8fr;
+    grid-template-rows: 1fr 1.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "A"
+      "B";
+    grid-area: Right-Side;
+  }
+  
+  .A { grid-area: A; }
+  
+  .B { grid-area: B; }
+  
